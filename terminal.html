@@ -1,0 +1,106 @@
+<pre><font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+makefile  vector3D.h  vector_lib.cpp  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ g++ vector3D.h  vector_lib.cpp  vector_main.cpp
+
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>  makefile  vector3D.h  vector3D.h.gch  vector_lib.cpp  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>  makefile  vector3D.h  vector3D.h.gch  vector_lib.cpp  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ./a.out
+1 2 3 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     vector3D.h      vector_lib.cpp
+makefile  vector3D.h.gch  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+g++ -c vector_main.cpp
+g++ -c vector_lib.cpp vector3D.h
+g++ vector_main.o vector_lib.o -o output
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     <font color="#8AE234"><b>output</b></font>      vector3D.h.gch  vector_lib.o     vector_main.o
+makefile  vector3D.h  vector_lib.cpp  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ./output
+1 2 3 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+g++ -c vector_main.cpp
+g++ vector_main.o vector_lib.o -o output
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ./output
+1 2 4 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     <font color="#8AE234"><b>output</b></font>      vector3D.h.gch  vector_lib.o     vector_main.o
+makefile  vector3D.h  vector_lib.cpp  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+make: &apos;output&apos; is up to date.
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ clear
+
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make clearrm *.o output
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     vector3D.h      vector_lib.cpp
+makefile  vector3D.h.gch  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+g++ -c vector_main.cpp
+g++ -c vector_lib.cpp vector3D.h
+g++ vector_main.o vector_lib.o -o output
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ./output
+1 2 4 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     <font color="#8AE234"><b>output</b></font>      vector3D.h.gch  vector_lib.o     vector_main.o
+makefile  vector3D.h  vector_lib.cpp  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make clearrm *.o output
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     vector3D.h      vector_lib.cpp
+makefile  vector3D.h.gch  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+g++ -c vector_main.cpp
+ls
+g++ -c vector_lib.cpp vector3D.h
+g++ vector_main.o vector_lib.o -o output
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     <font color="#8AE234"><b>output</b></font>      vector3D.h.gch  vector_lib.o     vector_main.o
+makefile  vector3D.h  vector_lib.cpp  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ./output
+1 2 4 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make clearrm *.o 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     <font color="#8AE234"><b>output</b></font>      vector3D.h.gch  vector_main.cpp
+makefile  vector3D.h  vector_lib.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ./output
+1 2 4 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+g++ -c vector_main.cpp
+g++ -c vector_lib.cpp vector3D.h
+g++ vector_main.o vector_lib.o -o output
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+g++ -c vector_main.cpp
+ls
+g++ -c vector_lib.cpp vector3D.h
+<b>vector_lib.cpp:18:54:</b> <font color="#EF2929"><b>error: </b></font>no ‘<b>vector3DClass::vector3D vector3DClass::vector3D::operator-(const vector3DClass::vector3D&amp;)</b>’ member function declared in class ‘<b>vector3DClass::vector3D</b>’
+      vector3D vector3D::operator-( const vector3D&amp; v <font color="#EF2929"><b>)</b></font>{
+                                                      <font color="#EF2929"><b>^</b></font>
+makefile:8: recipe for target &apos;vector_lib.o&apos; failed
+make: *** [vector_lib.o] Error 1
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     <font color="#8AE234"><b>output</b></font>      vector3D.h.gch  vector_lib.o     vector_main.o
+makefile  vector3D.h  vector_lib.cpp  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+g++ -c vector_lib.cpp vector3D.h
+<b>vector_lib.cpp:18:54:</b> <font color="#EF2929"><b>error: </b></font>no ‘<b>vector3DClass::vector3D vector3DClass::vector3D::operator-(const vector3DClass::vector3D&amp;)</b>’ member function declared in class ‘<b>vector3DClass::vector3D</b>’
+      vector3D vector3D::operator-( const vector3D&amp; v <font color="#EF2929"><b>)</b></font>{
+                                                      <font color="#EF2929"><b>^</b></font>
+makefile:8: recipe for target &apos;vector_lib.o&apos; failed
+make: *** [vector_lib.o] Error 1
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+g++ -c vector_lib.cpp vector3D.h
+g++ vector_main.o vector_lib.o -o output
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ls
+<font color="#8AE234"><b>a.out</b></font>     <font color="#8AE234"><b>output</b></font>      vector3D.h.gch  vector_lib.o     vector_main.o
+makefile  vector3D.h  vector_lib.cpp  vector_main.cpp
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ./output
+3 5 9 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ make
+g++ -c vector_main.cpp
+^[[A^[[A^[[Ag++ vector_main.o vector_lib.o -o output
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ ./output
+-1 -1 -1 
+<font color="#8AE234"><b>joamd@joamd-Inspiron-3531</b></font>:<font color="#729FCF"><b>~/Documents/Intern/NVIDIA/Vector</b></font>$ 
+</pre>
