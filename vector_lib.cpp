@@ -5,7 +5,7 @@ namespace vector3DClass{
 
     //----------CONSTRUCTORS----------
     vector3D::vector3D():x(0.0),y(0.0),z(0.0){}
-    vector3D::vector3D( float aX, float aY, float aZ ):x(aX),y(aY),z(aZ){}
+    vector3D::vector3D(float aX, float aY, float aZ):x(aX),y(aY),z(aZ){}
 
     //----------DESTRUCTORS----------
     vector3D::~vector3D(){
@@ -13,78 +13,74 @@ namespace vector3DClass{
     }
 
     //----------COPY CONSTRUCTORS----------
-    vector3D::vector3D( const vector3D& v ):x(v.x),y(v.y),z(v.z){}
-    void vector3D::operator=( const vector3D& v ){
-        x=v.x;
-        y=v.y;
-        z=v.z;
+    vector3D::vector3D(const vector3D& v):x(v.x),y(v.y),z(v.z){}
+    void vector3D::operator=(const vector3D& v){
+        x = v.x;
+        y = v.y;
+        z = v.z;
    	}
 
     //----------ADDITION AND SUBTRACTION----------
-    vector3D vector3D::operator+( const vector3D& v ){
-        return vector3D( x + v.x, y + v.y, z + v.z);
+    vector3D vector3D::operator+(const vector3D& v){
+        return vector3D(x + v.x, y + v.y, z + v.z);
     }
-    void vector3D::operator+=( const vector3D& v ){
-        x+=v.x;
-        y+=v.y;
-        z+=v.z;
+    void vector3D::operator+=(const vector3D& v){
+        x += v.x;
+        y += v.y;
+        z += v.z;
     }
-    vector3D vector3D::operator-( const vector3D& v ){
-        return vector3D( x - v.x, y - v.y, z - v.z);
+    vector3D vector3D::operator-(const vector3D& v){
+        return vector3D(x - v.x, y - v.y, z - v.z);
     }
-    void vector3D::operator-=( const vector3D& v ){
-        x-=v.x;
-        y-=v.y;
-        z-=v.z;
+    void vector3D::operator-=(const vector3D& v){
+        x -= v.x;
+        y -= v.y;
+        z -= v.z;
     }
 
 
     //----------SCALAR MULTIPLICATION----------
-    void vector3D::operator*=( float k ){
-        x*=k;
-        y*=k;
-        z*=k;
+    void vector3D::operator*=(float k){
+        x *= k;
+        y *= k;
+        z *= k;
     }
-    vector3D vector3D::operator*( float k ){
-        return vector3D( x * k, y * k, z * k);
+    vector3D vector3D::operator*(float k){
+        return vector3D(x * k, y * k, z * k);
     }
-    void vector3D::operator/=( float k ){
-        x/=k;
-        y/=k;
-        z/=k;
+    void vector3D::operator/=(float k){
+        x /= k;
+        y /= k;
+        z /= k;
     }
-    vector3D vector3D::operator/( float k ){
-        return vector3D( x / k, y / k, z / k);
+    vector3D vector3D::operator/(float k){
+        return vector3D(x / k, y / k, z / k);
     }
 
 
     //----------DOT PRODUCT----------
-    float vector3D::dot( const vector3D& v ){
-        float dotProd = x * v.x + y * v.y + z * v.z;
+    float vector3D::dot(const vector3D& v){
+        float dotProd = x*v.x + y*v.y + z*v.z;
         return dotProd;
     }
-    float vector3D::operator*( const vector3D& v ){
-        float dotProd = x * v.x + y * v.y + z * v.z;
+    float vector3D::operator*(const vector3D& v){
+        float dotProd = x*v.x + y*v.y + z*v.z;
         return dotProd;
     }
-    //void vector3D::operator*=( const vector3D& v ){
-    //    *this = *this^v;
-    //}
-
 
     //----------CROSS PRODUCT----------
-    vector3D vector3D::cross( const vector3D& v ){
+    vector3D vector3D::cross(const vector3D& v){
         return vector3D(y*v.z - z*v.y,
                         z*v.x - x*v.z,
                         x*v.y - y*v.x);
     }
-    vector3D vector3D::operator^( const vector3D& v ){
+    vector3D vector3D::operator^(const vector3D& v){
         return vector3D(y*v.z - z*v.y,
                         z*v.x - x*v.z,
                         x*v.y - y*v.x);
     }
-    void vector3D::operator^=( const vector3D& v ){
-        *this = *this^v;
+    void vector3D::operator^=(const vector3D& v){
+        *this = *this ^ v;
     }
 
     //----------MAGNITUDE----------
@@ -92,9 +88,9 @@ namespace vector3DClass{
         return std::sqrt(x*x + y*y + z*z);
     }
 
-    //----------NORMALIZE---------- 
+    //----------UNIT VECTOR----------
     vector3D vector3D::normalize(){
-        *this/=magnitude();
+        *this /= magnitude();
         return *this;
     }
 }

@@ -9,4 +9,4 @@ The class contains :
   6. Dot Product
   7. Cross Product
   8. Magnitude
-  9. Normalize
+  9. Unit Vector
