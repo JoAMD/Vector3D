@@ -1,0 +1,7 @@
+ 
+  1. The vector3D class follows Open Close Principle
+  
+      The vector3D class is designed in such a way that it is open to extensions but closed to modifications. The main
+      code of the class does not have to be modified to extend it to other features like vector rotations etc.
+      
+  2. 

@@ -38,8 +38,10 @@ namespace vector3DClass{
         vector3D operator^( const vector3D& v );
         void operator^=( const vector3D& v );
 
-
+        //----------MAGNITUDE----------
         float magnitude();
+        
+        //----------NORMALIZE---------- 
         vector3D normalize();
 
     };
