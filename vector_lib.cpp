@@ -8,9 +8,9 @@ namespace vector3DClass{
     vector3D::vector3D( float aX, float aY, float aZ ):x(aX),y(aY),z(aZ){}
 
     //----------DESTRUCTORS----------
-    //vector3D::~vector3D(){
-
-    //}
+    vector3D::~vector3D(){
+      //Destructor code can be added here
+    }
 
     //----------COPY CONSTRUCTORS----------
     vector3D::vector3D( const vector3D& v ):x(v.x),y(v.y),z(v.z){}

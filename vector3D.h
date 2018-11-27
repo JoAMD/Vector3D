@@ -11,7 +11,7 @@ namespace vector3DClass{
         vector3D( float aX, float aY, float aZ );
 
         //----------DESTRUCTORS----------
-        //~vector3D();
+        ~vector3D();
 
         //----------COPY CONSTRUCTORS----------
         vector3D( const vector3D& v );
