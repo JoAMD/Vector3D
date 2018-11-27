@@ -87,11 +87,12 @@ namespace vector3DClass{
         *this = *this^v;
     }
 
-
+    //----------MAGNITUDE----------
     float vector3D::magnitude(){
         return std::sqrt(x*x + y*y + z*z);
     }
 
+    //----------NORMALIZE---------- 
     vector3D vector3D::normalize(){
         *this/=magnitude();
         return *this;
