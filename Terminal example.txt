@@ -1,0 +1,104 @@
+username@PCname:~$ cd ~/file directory
+username@PCname:~/file directory$ make
+g++ -c vector_lib.cpp vector3D.h
+g++ vector_main.o vector_lib.o -o output
+username@PCname:~/file directory$ chmod +x ./output
+username@PCname:~/file directory$ ./output
+1 0 0
+0 0 0
+0 1 0
+0 0 0
+2
+
+----------ADDITION AND SUBTRACTION----------
+
+sum        = vector1 + vector2    ->   1i + 1j + 0k
+vector1   += vector2              ->   1i + 1j + 0k
+difference = vector1 - vector2    ->   1i + -1j + 0k
+vector1   -= vector2              ->   1i + -1j + 0k
+
+----------SCALAR MULTIPLICATION----------
+
+vector1   *= k                    ->   2i + 0j + 0k
+scalarProd = vector1 * k          ->   2i + 0j + 0k
+vector1   /= k                    ->   0.5i + 0j + 0k
+quotient   = vector1 / k          ->   0.5i + 0j + 0k
+
+----------MAGNITUDE----------
+
+vector1.magnitude()               -> 1
+
+vector2.magnitude()               -> 1
+
+----------UNIT VECTOR----------
+
+vector1.normalize()               -> 1i + 0j + 0k
+
+----------DOT PRODUCT----------
+
+Prod = vector1.dot(vector2)       ->   0
+Prod = vector1 * vector2          ->   0
+
+----------CROSS PRODUCT----------
+
+crossProd = vector1.cross(vector2)->   0i + 0j + 1k
+crossProd = vector1 ^ vector2     ->   0i + 0j + 1k
+vector1  ^= vector2               ->   0i + 0j + 1k
+
+----------PROJECTION----------
+
+Projection of vector 2 on vector 1 -> 0
+
+----------ANGLE----------
+
+Angle between vector1 and vector 2 using dot product -> 90 degrees
+
+username@PCname:~/file directory$ ./output
+5 3 1
+6 2 5
+8 6 8
+9 2 1
+2
+
+----------ADDITION AND SUBTRACTION----------
+
+sum        = vector1 + vector2    ->   -2i + 5j + 3k
+vector1   += vector2              ->   -2i + 5j + 3k
+difference = vector1 - vector2    ->   0i + -3j + -11k
+vector1   -= vector2              ->   0i + -3j + -11k
+
+----------SCALAR MULTIPLICATION----------
+
+vector1   *= k                    ->   -2i + 2j + -8k
+scalarProd = vector1 * k          ->   -2i + 2j + -8k
+vector1   /= k                    ->   -0.5i + 0.5j + -2k
+quotient   = vector1 / k          ->   -0.5i + 0.5j + -2k
+
+----------MAGNITUDE----------
+
+vector1.magnitude()               -> 4.24264
+
+vector2.magnitude()               -> 8.12404
+
+----------UNIT VECTOR----------
+
+vector1.normalize()               -> -0.235702i + 0.235702j + -0.942809k
+
+----------DOT PRODUCT----------
+
+Prod = vector1.dot(vector2)       ->   -23
+Prod = vector1 * vector2          ->   -23
+
+----------CROSS PRODUCT----------
+
+crossProd = vector1.cross(vector2)->   23i + 11j + -3k
+crossProd = vector1 ^ vector2     ->   23i + 11j + -3k
+vector1  ^= vector2               ->   23i + 11j + -3k
+
+----------PROJECTION----------
+
+Projection of vector 2 on vector 1 -> -5.42115
+
+----------ANGLE----------
+
+Angle between vector1 and vector 2 using dot product -> 131.859 degrees

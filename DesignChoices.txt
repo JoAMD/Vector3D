@@ -1,5 +1,11 @@
 
-  1.  The vector3D class follows Open Close Principle: The vector3D class is designed in such a way that it is open to extensions but closed to modifications. The main
-      code of the class does not have to be modified to extend it to other features like vector rotations etc.
+  1.  The vector3D class follows Open Close Principle: The vector3D class is designed in such a way that it is open to
+      extensions but closed to modifications. The main code of the class does not have to be modified to extend it to
+      other features like vector rotations etc.
 
-  2.  Flexible, non-fragile and mobile code
+  2.  Ooperator Overloading is used. It is a type of polymorphism in which an operator is overloaded to give user
+      defined meaning to it.
+      Here, the operators like '+', '*' are overloaded to utilise it for addition of vectors and scalar multiplication
+      respectively.
+
+  3.  Flexible, non-fragile and mobile code

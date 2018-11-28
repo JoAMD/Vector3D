@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 #include "vector3D.h"
 
 using namespace std;
@@ -38,16 +39,6 @@ int main(){
     cin>>k;
 
 
-
-
-    //----------DESTRUCTORS----------
-    //~vector3D();
-
-    //----------COPY CONSTRUCTORS----------
-    //vector3D(const vector3D& v);
-    //void operator=(const vector3D& v);
-
-
     //----------ADDITION AND SUBTRACTION----------
     cout<<"\n----------ADDITION AND SUBTRACTION----------\n\n";
     vector3D sum(0,0,0);
@@ -85,6 +76,22 @@ int main(){
     cout<<"quotient   = vector1 / k          ->   "<<quotient.x<<"i + "<<quotient.y<<"j + "<<quotient.z<<"k "<<"\n\n";
 
 
+    //----------MAGNITUDE----------
+    cout<<"----------MAGNITUDE----------\n\n";
+    float mag1 = vector1.magnitude();
+    cout<<"vector1.magnitude()               -> "<<mag1<<"\n\n";
+    float mag2 = vector2.magnitude();
+    cout<<"vector2.magnitude()               -> "<<mag2<<"\n\n";
+
+    //----------UNIT VECTOR----------
+    cout<<"----------UNIT VECTOR----------\n\n";
+    tempA = vector1;
+    vector1.normalize();
+    //cout<<"Unit vector(vector1)-> "<<U.x<<"i + "<<U.y<<"j + "<<U.z<<"k "<<endl;
+    cout<<"vector1.normalize()               -> "<<vector1.x<<"i + "<<vector1.y<<"j + "<<vector1.z<<"k "<<"\n\n";
+    vector1 = tempA;
+
+
     //----------DOT PRODUCT----------
     cout<<"----------DOT PRODUCT----------\n\n";
     float dotProd;
@@ -105,16 +112,18 @@ int main(){
     cout<<"vector1  ^= vector2               ->   "<<vector1.x<<"i + "<<vector1.y<<"j + "<<vector1.z<<"k "<<"\n\n";
     vector1 = tempA;
 
-    //----------MAGNITUDE----------
-    cout<<"----------MAGNITUDE----------\n\n";
-    float mag = vector1.magnitude();
-    cout<<"vector1.magnitude()               -> "<<mag<<"\n\n";
 
-    //----------UNIT VECTOR----------
-    cout<<"----------UNIT VECTOR----------\n\n";
-    vector1.normalize();
-    //cout<<"Unit vector(vector1)-> "<<U.x<<"i + "<<U.y<<"j + "<<U.z<<"k "<<endl;
-    cout<<"vector1.normalize()               -> "<<vector1.x<<"i + "<<vector1.y<<"j + "<<vector1.z<<"k "<<"\n\n";
+    //----------PROJECTION----------
+    cout<<"----------PROJECTION----------\n\n";
+    float projection2on1 = dotProd / mag1;
+    cout<<"Projection of vector 2 on vector 1 -> "<<projection2on1<<"\n\n";
+
+
+    //----------ANGLE----------
+    cout<<"----------ANGLE----------\n\n";
+    float angle = acos(projection2on1 / mag2);
+    cout<<"Angle between vector1 and vector 2 using dot product -> "<<180 * angle / M_PI<<" degrees"<<"\n\n";
+
 
     return 0;
 }
