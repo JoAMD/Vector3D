@@ -19,7 +19,7 @@ int main(){
     aY = aY2 - aY1;
     aZ = aZ2 - aZ1;
     //----------CONSTRUCTOR CALL----------
-    vector3D A(aX, aY, aZ);
+    vector3D vector1(aX, aY, aZ);
 
     //cout<<"Enter the x, y, z coordinates of the head of the second vector\n";
     cin>>aX2>>aY2>>aZ2;
@@ -30,7 +30,7 @@ int main(){
     aY = aY2 - aY1;
     aZ = aZ2 - aZ1;
     //----------CONSTRUCTOR CALLS----------
-    vector3D B(aX, aY, aZ);
+    vector3D vector2(aX, aY, aZ);
     //vector3D S();//3,4,0);
 
     float k;
@@ -50,71 +50,71 @@ int main(){
 
     //----------ADDITION AND SUBTRACTION----------
     cout<<"\n----------ADDITION AND SUBTRACTION----------\n\n";
-    vector3D S(0,0,0);
-    S = A + B;
-    cout<<"S = A + B    ->   "<<S.x<<" "<<S.y<<" "<<S.z<<" "<<endl;
-    vector3D tempA = A;
-    A += B;
-    cout<<"A += B       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
-    A = tempA;
+    vector3D sum(0,0,0);
+    sum = vector1 + vector2;
+    cout<<"sum        = vector1 + vector2    ->   "<<sum.x<<"i + "<<sum.y<<"j + "<<sum.z<<"k "<<endl;
+    vector3D tempA = vector1;
+    vector1 += vector2;
+    cout<<"vector1   += vector2              ->   "<<vector1.x<<"i + "<<vector1.y<<"j + "<<vector1.z<<"k "<<endl;
+    vector1 = tempA;
 
-    S = A - B;
-    cout<<"S = A - B    ->   "<<S.x<<" "<<S.y<<" "<<S.z<<" "<<endl;
-    tempA = A;
-    A -= B;
-    cout<<"A -= B       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<"\n\n";
-    A = tempA;
+    vector3D difference = vector1 - vector2;
+    cout<<"difference = vector1 - vector2    ->   "<<difference.x<<"i + "<<difference.y<<"j + "<<difference.z<<"k "<<endl;
+    tempA = vector1;
+    vector1 -= vector2;
+    cout<<"vector1   -= vector2              ->   "<<vector1.x<<"i + "<<vector1.y<<"j + "<<vector1.z<<"k "<<"\n\n";
+    vector1 = tempA;
 
 
     //----------SCALAR MULTIPLICATION----------
     cout<<"----------SCALAR MULTIPLICATION----------\n\n";
-    vector3D P(1,1,1);
-    tempA = A;
-    A *= k;
-    cout<<"A *= k       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
-    A = tempA;
-    P = A * k;
-    cout<<"P = A * k    ->   "<<P.x<<" "<<P.y<<" "<<P.z<<" "<<endl;
+    vector3D scalarProd(1,1,1);
+    tempA = vector1;
+    vector1 *= k;
+    cout<<"vector1   *= k                    ->   "<<vector1.x<<"i + "<<vector1.y<<"j + "<<vector1.z<<"k "<<endl;
+    vector1 = tempA;
+    scalarProd = vector1 * k;
+    cout<<"scalarProd = vector1 * k          ->   "<<scalarProd.x<<"i + "<<scalarProd.y<<"j + "<<scalarProd.z<<"k "<<endl;
 
-    vector3D D(1,1,1);
-    tempA = A;
-    A /= k;
-    cout<<"A /= k       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
-    A = tempA;
-    D = A / k;
-    cout<<"D = A / k    ->   "<<D.x<<" "<<D.y<<" "<<D.z<<" "<<"\n\n";
+    vector3D quotient(1,1,1);
+    tempA = vector1;
+    vector1 /= k;
+    cout<<"vector1   /= k                    ->   "<<vector1.x<<"i + "<<vector1.y<<"j + "<<vector1.z<<"k "<<endl;
+    vector1 = tempA;
+    quotient = vector1 / k;
+    cout<<"quotient   = vector1 / k          ->   "<<quotient.x<<"i + "<<quotient.y<<"j + "<<quotient.z<<"k "<<"\n\n";
 
 
     //----------DOT PRODUCT----------
     cout<<"----------DOT PRODUCT----------\n\n";
-    float dotP;
-    dotP = A.dot(B);
-    cout<<"P = A.dot(B) ->   "<<dotP<<endl;
-    dotP = A * B;
-    cout<<"P = A * B    ->   "<<dotP<<"\n\n";
+    float dotProd;
+    dotProd = vector1.dot(vector2);
+    cout<<"Prod = vector1.dot(vector2)       ->   "<<dotProd<<endl;
+    dotProd = vector1 * vector2;
+    cout<<"Prod = vector1 * vector2          ->   "<<dotProd<<"\n\n";
 
 
     //----------CROSS PRODUCT----------
     cout<<"----------CROSS PRODUCT----------\n\n";
-    P = A.cross(B);
-    cout<<"P = A.cross(B)->   "<<P.x<<" "<<P.y<<" "<<P.z<<" "<<endl;
-    P = A ^ B;
-    cout<<"P = A ^ B    ->   "<<P.x<<" "<<P.y<<" "<<P.z<<" "<<endl;
-    tempA = A;
-    A ^= B;
-    cout<<"A ^= B       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<"\n\n";
-    A = tempA;
+    vector3D crossProd = vector1.cross(vector2);
+    cout<<"crossProd = vector1.cross(vector2)->   "<<crossProd.x<<"i + "<<crossProd.y<<"j + "<<crossProd.z<<"k "<<endl;
+    crossProd = vector1 ^ vector2;
+    cout<<"crossProd = vector1 ^ vector2     ->   "<<crossProd.x<<"i + "<<crossProd.y<<"j + "<<crossProd.z<<"k "<<endl;
+    tempA = vector1;
+    vector1 ^= vector2;
+    cout<<"vector1  ^= vector2               ->   "<<vector1.x<<"i + "<<vector1.y<<"j + "<<vector1.z<<"k "<<"\n\n";
+    vector1 = tempA;
 
     //----------MAGNITUDE----------
     cout<<"----------MAGNITUDE----------\n\n";
-    float mag = A.magnitude();
-    cout<<"A.magnitude()-> "<<mag<<"\n\n";
+    float mag = vector1.magnitude();
+    cout<<"vector1.magnitude()               -> "<<mag<<"\n\n";
 
     //----------UNIT VECTOR----------
     cout<<"----------UNIT VECTOR----------\n\n";
-    A.normalize();
-    //cout<<"Unit vector(A)-> "<<U.x<<" "<<U.y<<" "<<U.z<<" "<<endl;
-    cout<<"A.normalize()-> "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<"\n\n";
+    vector1.normalize();
+    //cout<<"Unit vector(vector1)-> "<<U.x<<"i + "<<U.y<<"j + "<<U.z<<"k "<<endl;
+    cout<<"vector1.normalize()               -> "<<vector1.x<<"i + "<<vector1.y<<"j + "<<vector1.z<<"k "<<"\n\n";
 
     return 0;
 }
