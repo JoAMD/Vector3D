@@ -89,8 +89,8 @@ namespace vector3DClass{
     }
 
     //----------UNIT VECTOR----------
-    vector3D vector3D::normalize(){
+    void vector3D::normalize(){
         *this /= magnitude();
-        return *this;
+        //return *this;
     }
 }

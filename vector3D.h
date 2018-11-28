@@ -42,7 +42,7 @@ namespace vector3DClass{
         float magnitude();
 
         //----------UNIT VECTOR----------
-        vector3D normalize();
+        void normalize();
 
     };
 }

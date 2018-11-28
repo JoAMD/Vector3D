@@ -49,54 +49,72 @@ int main(){
 
 
     //----------ADDITION AND SUBTRACTION----------
+    cout<<"\n----------ADDITION AND SUBTRACTION----------\n\n";
     vector3D S(0,0,0);
     S = A + B;
-    cout<<"\nS = A + B ->"<<S.x<<" "<<S.y<<" "<<S.z<<" "<<endl;
+    cout<<"S = A + B    ->   "<<S.x<<" "<<S.y<<" "<<S.z<<" "<<endl;
     vector3D tempA = A;
     A += B;
-    cout<<"A += B ->"<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
+    cout<<"A += B       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
     A = tempA;
 
     S = A - B;
-    cout<<"S = A - B ->"<<S.x<<" "<<S.y<<" "<<S.z<<" "<<endl;
+    cout<<"S = A - B    ->   "<<S.x<<" "<<S.y<<" "<<S.z<<" "<<endl;
     tempA = A;
     A -= B;
-    cout<<"A -= B ->"<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
+    cout<<"A -= B       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<"\n\n";
     A = tempA;
 
 
     //----------SCALAR MULTIPLICATION----------
+    cout<<"----------SCALAR MULTIPLICATION----------\n\n";
     vector3D P(1,1,1);
     tempA = A;
     A *= k;
-    cout<<"A *= k ->"<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
+    cout<<"A *= k       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
     A = tempA;
     P = A * k;
-    cout<<"S = A * k ->"<<P.x<<" "<<P.y<<" "<<P.z<<" "<<endl;
+    cout<<"P = A * k    ->   "<<P.x<<" "<<P.y<<" "<<P.z<<" "<<endl;
 
     vector3D D(1,1,1);
     tempA = A;
     A /= k;
-    cout<<"A /= k ->"<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
+    cout<<"A /= k       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<endl;
     A = tempA;
     D = A / k;
-    cout<<"D = A / k ->"<<D.x<<" "<<D.y<<" "<<D.z<<" "<<endl;
+    cout<<"D = A / k    ->   "<<D.x<<" "<<D.y<<" "<<D.z<<" "<<"\n\n";
 
-/*
+
     //----------DOT PRODUCT----------
-    float dot(const vector3D& v);
-    float operator*(const vector3D& v);
+    cout<<"----------DOT PRODUCT----------\n\n";
+    float dotP;
+    dotP = A.dot(B);
+    cout<<"P = A.dot(B) ->   "<<dotP<<endl;
+    dotP = A * B;
+    cout<<"P = A * B    ->   "<<dotP<<"\n\n";
+
 
     //----------CROSS PRODUCT----------
-    vector3D cross(const vector3D& v);
-    vector3D operator^(const vector3D& v);
-    void operator^=(const vector3D& v);
+    cout<<"----------CROSS PRODUCT----------\n\n";
+    P = A.cross(B);
+    cout<<"P = A.cross(B)->   "<<P.x<<" "<<P.y<<" "<<P.z<<" "<<endl;
+    P = A ^ B;
+    cout<<"P = A ^ B    ->   "<<P.x<<" "<<P.y<<" "<<P.z<<" "<<endl;
+    tempA = A;
+    A ^= B;
+    cout<<"A ^= B       ->   "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<"\n\n";
+    A = tempA;
 
     //----------MAGNITUDE----------
-    float magnitude();
+    cout<<"----------MAGNITUDE----------\n\n";
+    float mag = A.magnitude();
+    cout<<"A.magnitude()-> "<<mag<<"\n\n";
 
     //----------UNIT VECTOR----------
+    cout<<"----------UNIT VECTOR----------\n\n";
     A.normalize();
+    //cout<<"Unit vector(A)-> "<<U.x<<" "<<U.y<<" "<<U.z<<" "<<endl;
+    cout<<"A.normalize()-> "<<A.x<<" "<<A.y<<" "<<A.z<<" "<<"\n\n";
 
     return 0;
 }
