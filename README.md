@@ -32,6 +32,7 @@ Proper comments and variable names are given to make the code easily readable
 
 
 ------------------------HOW TO COMPILE------------------------
+
 In bash (Ubuntu) -
 (Ignore the double inverted commas " " given before the bash commands below)
 1. Go to the file directory using "cd ~/file directory"
@@ -49,4 +50,5 @@ Enter the x, y, z coordinates of the tail of the second vector
 Enter the constant k to perform scalar multiplication
 
 ------------------------EXAMPLE------------------------
+
 An example of the compilation on bash (Ubuntu) is given as a txt file: "Terminal example.txt"
