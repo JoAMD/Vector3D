@@ -23,12 +23,19 @@ Proper comments and variable names are given to make the code easily readable
 ------------------------FILES DESCRIPTION------------------------
 
 !-->  "vector3D.h" is the main header file conatining the 3D Vector class
+
 !-->  "vector_lib.cpp" has all the function definitions of the 3D Vector class
+
 !-->  "vector_main.cpp" has all the function calls. Consider it as a test for the class
+
 !-->  "makefile" automates the compliling process (more info on the next section)
+
 !-->  "output" is the output file created by the makefile
+
 !-->  The ".o" files are also created by the makefile
+
 !-->  "DesignChoices.txt" is self explanatory, contains the Design Choices.
+
 
 
 ------------------------HOW TO COMPILE------------------------
