@@ -17,6 +17,7 @@ The class contains :
   9.  Cross Product
   10. Projection
   11. Angle
+
 Proper comments and variable names are given to make the code easily readable
 
 
